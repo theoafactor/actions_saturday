@@ -11,6 +11,9 @@ jobs:
             - name: "Greeting step"
               run: echo "This is my first workflow"
 
+            - name: "Checks out"
+              uses: actions/checkout@v4
+
             - name: "Logs in the user into Docker"
               uses: docker/login-action@v3
               with:
