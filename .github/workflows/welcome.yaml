@@ -17,4 +17,9 @@ jobs:
                 username: ${{ secrets.DOCKERHUB_USERNAME }}
                 password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
+            - name: "Build image"
+              run: docker build -t theoafactor/action_code_saturday:latest .
+
+            - name: "Push to Docker Hub"
+              run: docker push theoafactor/action_code_saturday:latest
 
